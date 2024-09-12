@@ -1,0 +1,3 @@
+In this project, we used the LLAMA3 language model developed by Meta, integrated via GrockCloud, a cloud platform specialized in hosting and interacting with advanced LLM models. We also leveraged Langchain, a framework designed to build applications powered by language models, which simplifies integration with external data sources and handles complex query chains.
+
+For job description extraction, we utilized web scraping through Langchain. The user can also input specific details they want to include for the job offer, and the system generates a complete motivation letter by simply entering the job URL and their custom additions.
