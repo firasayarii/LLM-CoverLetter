@@ -1,15 +1,18 @@
 import streamlit as st
 from langchain_community.document_loaders import WebBaseLoader
-from utilities import Token 
+import os
+from dotenv import load_dotenv
 from langchain_core.prompts import PromptTemplate
 from langchain_groq import ChatGroq
 
+Token = st.secrets['GROQ_API_KEY']
 llm = ChatGroq(
     model="llama-3.1-70b-versatile",
     temperature=0,
     groq_api_key=Token,
     # other params...
 )
+
 
 
 
