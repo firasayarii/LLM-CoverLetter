@@ -19,7 +19,7 @@ st.title("📧 Motivation Letter for Job Offer")
 
 # User inputs
 url_input = st.text_input("Enter the URL of the offer:")
-mentions = st.text_input("What do you want to mention (Personal information and your interest):")
+mentions = st.text_input("What do you want to mention (Personal information and your interest):",placeholder='I am X, and currently studying in Y university, I am interested in...')
 
 # Button for submission
 submit_button = st.button("Submit")
