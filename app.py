@@ -18,7 +18,7 @@ llm = ChatGroq(
 
 
 
-
+st.set_page_config(page_title="Coverletter", page_icon="📧")
 st.title("📧 Motivation letter for Job offer")
 url_input = st.text_input("Enter a URL:", value="https://www.welcometothejungle.com/fr/companies/quicksign/jobs/stage-en-data-science-f-h_paris?q=7367ad96b6fc11fd116aa0f388f9e8ca&o=2b3b8224-eac0-43d7-b21f-db9f8d49b09f")
 mentions = st.text_input("What do you want to mention (Personal information and your interest) :")
