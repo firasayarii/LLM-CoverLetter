@@ -23,12 +23,17 @@ except KeyError:
     st.error("Missing GROQ_API_KEY in Streamlit secrets.")
     st.stop()
 
+# Cache the ChatGroq model initialization
+@st.cache_resource
+def load_chat_model(api_key):
+    return ChatGroq(
+        model="llama-3.1-70b-versatile",
+        temperature=0,
+        groq_api_key=api_key
+    )
+
 # Initialize the ChatGroq model
-llm = ChatGroq(
-    model="llama-3.1-70b-versatile",
-    temperature=0,
-    groq_api_key=Token
-)
+llm = load_chat_model(Token)
 
 # User inputs
 url_input = st.text_input("Enter the URL of the job offer:")
